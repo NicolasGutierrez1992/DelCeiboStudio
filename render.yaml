@@ -1,10 +1,12 @@
 services:
-  - type: web
+  - type: static
     name: bordados-castellanos
-    env: node
+    env: static
     plan: free
-    buildCommand: npm install
-    startCommand: npm start
-    envVars:
-      - key: NODE_ENV
-        value: production
+    branch: main
+    # Ejecuta build.sh si lo tienes; si no, el comando fallará silenciosamente gracias a '|| true'
+    buildCommand: bash build.sh || true
+    # Ruta relativa al directorio que contiene index.html (usa '.' si está en la raíz)
+    publishPath: .
+    # Variables de entorno si las necesitaras
+    envVars: []
