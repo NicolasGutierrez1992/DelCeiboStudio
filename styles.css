@@ -1,10 +1,11 @@
 /* Reset y Variables Globales */
 :root {
-    --primary-color: #8B4513;
-    --secondary-color: #D4AF37;
-    --accent-color: #F5E6D3;
-    --dark-color: #2C2C2C;
-    --light-color: #F9F7F4;
+    --primary-color: #700303; /* color principal del logo */
+    --primary-dark: #4C0202;
+    --secondary-color: #8B1B1B; /* tono intermedio para acentos */
+    --accent-color: #EAD5D5; /* tint suave para fondos */
+    --dark-color: #1B1B1B; /* texto principal */
+    --light-color: #FFF6F6; /* fondo general */
     --border-radius: 8px;
     --shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     --transition: all 0.3s ease;
@@ -45,7 +46,7 @@ body {
 .navbar-container {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 1rem 20px;
+    padding: 1.25rem 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -62,15 +63,30 @@ body {
 }
 
 .logo-img {
-    width: 40px;
-    height: 40px;
+    width: 140px; /* hacer el logo grande y dominante */
+    height: auto;
     object-fit: contain;
+    display: block;
 }
 
 .logo-text {
     font-family: 'Playfair Display', serif;
     color: var(--primary-color);
+    font-size: 1.6rem; /* aumentar tamaño del texto del logo */
+    letter-spacing: 0.5px;
 }
+
+/* Soporte para variantes del logo */
+.logo-img--boxed { display: none; width: 120px; }
+.logo-img--transparent { display: block; width: 160px; }
+
+/* Si el fondo de la navbar fuera oscuro, usar esta clase para invertir logos */
+.navbar--dark .logo-img--transparent { display: none; }
+.navbar--dark .logo-img--boxed { display: block; }
+.navbar--dark .logo-text { color: white; }
+
+/* Ajuste: cuando el logo transparente necesita un pequeño contenedor */
+.logo .logo-img--transparent { padding: 6px; background: transparent; border-radius: 6px; }
 
 .nav-menu {
     display: flex;
@@ -393,7 +409,7 @@ body {
 .stats strong {
     display: block;
     font-size: 2rem;
-    color: var(--primary-color);
+    color: var (--primary-color);
     margin-bottom: 0.5rem;
 }
 
@@ -654,6 +670,11 @@ body {
     .hero-title {
         font-size: 2.5rem;
     }
+
+    .logo-img { width: 110px; }
+    .logo-img--transparent { width: 120px; }
+    .logo-img--boxed { width: 96px; }
+    .logo-text { font-size: 1.25rem; }
 }
 
 @media (max-width: 480px) {
@@ -677,4 +698,10 @@ body {
     .contacto-form textarea {
         font-size: 16px;
     }
+
+    .logo-img { width: 84px; }
+    .logo-img--transparent { width: 96px; }
+    .logo-img--boxed { width: 64px; }
+    .logo-text { font-size: 1rem; }
+    .navbar-container { padding: 0.75rem 12px; }
 }
