@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bordados Castellanos - Tradición y Elegancia</title>
+    <meta name="description" content="Casa de bordados artesanales española con más de 30 años de tradición. Bordados personalizados de máxima calidad.">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navegación -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <div class="logo">
+                <img src="logo.svg" alt="Bordados Castellanos" class="logo-img">
+                <span class="logo-text">Bordados Castellanos</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#inicio" class="nav-link">Inicio</a></li>
+                <li><a href="#colecciones" class="nav-link">Colecciones</a></li>
+                <li><a href="#servicios" class="nav-link">Servicios</a></li>
+                <li><a href="#sobre-nosotros" class="nav-link">Sobre Nosotros</a></li>
+                <li><a href="#contacto" class="nav-link nav-link-btn">Contacto</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="inicio">
+        <div class="hero-content">
+            <h1 class="hero-title">Bordados de Tradición</h1>
+            <p class="hero-subtitle">Artesanía española de excelencia desde 1992</p>
+            <button class="btn btn-primary" onclick="document.getElementById('contacto').scrollIntoView({behavior: 'smooth'})">Solicitar Presupuesto</button>
+        </div>
+        <div class="hero-image">
+            <img src="hero-embroidery.jpg" alt="Bordados artesanales">
+        </div>
+    </section>
+
+    <!-- Colecciones Destacadas -->
+    <section class="colecciones" id="colecciones">
+        <div class="container">
+            <h2 class="section-title">Nuestras Colecciones</h2>
+            <div class="colecciones-grid">
+                <div class="coleccion-card">
+                    <div class="coleccion-image">
+                        <img src="coleccion-tradicional.jpg" alt="Colección Tradicional">
+                    </div>
+                    <h3>Colección Tradicional</h3>
+                    <p>Diseños clásicos inspirados en la artesanía española medieval. Bordados en hilo de seda y algodón de máxima calidad.</p>
+                    <a href="#contacto" class="btn btn-secondary">Más información</a>
+                </div>
+
+                <div class="coleccion-card">
+                    <div class="coleccion-image">
+                        <img src="coleccion-moderna.jpg" alt="Colección Moderna">
+                    </div>
+                    <h3>Colección Moderna</h3>
+                    <p>Diseños contemporáneos que fusionan la tradición con la modernidad. Perfecta para decoración de interiores actual.</p>
+                    <a href="#contacto" class="btn btn-secondary">Más información</a>
+                </div>
+
+                <div class="coleccion-card">
+                    <div class="coleccion-image">
+                        <img src="coleccion-personalizada.jpg" alt="Bordados Personalizados">
+                    </div>
+                    <h3>Bordados Personalizados</h3>
+                    <p>Creamos tus diseños únicos. Desde logotipos corporativos hasta obras de arte textil personalizadas.</p>
+                    <a href="#contacto" class="btn btn-secondary">Más información</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Servicios -->
+    <section class="servicios" id="servicios">
+        <div class="container">
+            <h2 class="section-title">Nuestros Servicios</h2>
+            <div class="servicios-grid">
+                <div class="servicio-item">
+                    <div class="servicio-icon">🧵</div>
+                    <h3>Bordado a Mano</h3>
+                    <p>Técnicas tradicionales ejecutadas por nuestros maestros artesanos con más de 20 años de experiencia.</p>
+                </div>
+
+                <div class="servicio-item">
+                    <div class="servicio-icon">⚙️</div>
+                    <h3>Bordado Industrial</h3>
+                    <p>Máquinas de última generación para proyectos de gran volumen con precisión milimétrica.</p>
+                </div>
+
+                <div class="servicio-item">
+                    <div class="servicio-icon">🎨</div>
+                    <h3>Diseño y Digitalización</h3>
+                    <p>Nuestro equipo de diseñadores convierte tus ideas en patrones digitales optimizados para bordar.</p>
+                </div>
+
+                <div class="servicio-item">
+                    <div class="servicio-icon">📦</div>
+                    <h3>Acabados Premium</h3>
+                    <p>Montaje, enmarcación y embalaje cuidadoso de tus bordados personalizados.</p>
+                </div>
+
+                <div class="servicio-item">
+                    <div class="servicio-icon">🏢</div>
+                    <h3>Soluciones Corporativas</h3>
+                    <p>Uniformes, logos bordados y merchandising de marca con identidad corporativa.</p>
+                </div>
+
+                <div class="servicio-item">
+                    <div class="servicio-icon">🚚</div>
+                    <h3>Envíos Rápidos</h3>
+                    <p>Entrega en toda España y Europa. Embalaje profesional y seguro para tus piezas.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Galería -->
+    <section class="galeria">
+        <div class="container">
+            <h2 class="section-title">Galería de Trabajos</h2>
+            <div class="galeria-grid">
+                <img src="trabajo-1.jpg" alt="Bordado clásico" class="galeria-item">
+                <img src="trabajo-2.jpg" alt="Bordado moderno" class="galeria-item">
+                <img src="trabajo-3.jpg" alt="Detalle bordado" class="galeria-item">
+                <img src="trabajo-4.jpg" alt="Proyecto corporativo" class="galeria-item">
+                <img src="trabajo-5.jpg" alt="Obra personalizada" class="galeria-item">
+                <img src="trabajo-6.jpg" alt="Bordado artístico" class="galeria-item">
+            </div>
+        </div>
+    </section>
+
+    <!-- Sobre Nosotros -->
+    <section class="sobre-nosotros" id="sobre-nosotros">
+        <div class="container">
+            <div class="sobre-content">
+                <div class="sobre-text">
+                    <h2 class="section-title">Sobre Bordados Castellanos</h2>
+                    <p>Con más de tres décadas de experiencia, somos referentes en el arte del bordado artesanal español. Nuestra familia ha transmitido sus conocimientos de generación en generación, manteniendo las técnicas tradicionales mientras abrazamos la innovación.</p>
+                    <p>Cada bordado que realizamos es una obra de arte única, hecha con pasión y dedicación. Utilizamos solo materiales de primera calidad: hilos de seda premium, telas de lino y algodón, y herramientas artesanales que garantizan resultados excepcionales.</p>
+                    <p>Nuestro compromiso es preservar la tradición del bordado español mientras ofrecemos soluciones modernas a nuestros clientes de todo el mundo.</p>
+                    <ul class="stats">
+                        <li><strong>32</strong> años de tradición</li>
+                        <li><strong>15+</strong> maestros artesanos</li>
+                        <li><strong>5000+</strong> proyectos completados</li>
+                        <li><strong>40+</strong> países servidos</li>
+                    </ul>
+                </div>
+                <div class="sobre-image">
+                    <img src="taller.jpg" alt="Nuestro taller artesanal">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonios -->
+    <section class="testimonios">
+        <div class="container">
+            <h2 class="section-title">Lo que Dicen Nuestros Clientes</h2>
+            <div class="testimonios-grid">
+                <div class="testimonio-card">
+                    <div class="estrellas">★★★★★</div>
+                    <p>"Bordados Castellanos ha superado todas mis expectativas. La calidad es extraordinaria y el trato impecable. Recomiendo sin dudarlo."</p>
+                    <strong>María García</strong>
+                    <span>Museo de Textiles, Segovia</span>
+                </div>
+
+                <div class="testimonio-card">
+                    <div class="estrellas">★★★★★</div>
+                    <p>"Trabajar con ellos fue una experiencia fantástica. Nos ayudaron a diseñar los bordados corporativos perfectos para nuestra empresa."</p>
+                    <strong>Juan López</strong>
+                    <span>Director General, Textiles Europa</span>
+                </div>
+
+                <div class="testimonio-card">
+                    <div class="estrellas">★★★★★</div>
+                    <p>"La precisión y dedicación que ponen en cada puntada es increíble. Mi bordado personalizado es una pieza de museo."</p>
+                    <strong>Elena Martínez</strong>
+                    <span>Coleccionista de Arte Textil</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contacto -->
+    <section class="contacto" id="contacto">
+        <div class="container">
+            <h2 class="section-title">Contacta con Nosotros</h2>
+            <div class="contacto-content">
+                <div class="contacto-info">
+                    <div class="info-item">
+                        <h3>📍 Ubicación</h3>
+                        <p>Calle de la Tradición, 45<br>40001 Segovia, España</p>
+                    </div>
+                    <div class="info-item">
+                        <h3>📞 Teléfono</h3>
+                        <p><a href="tel:+34921234567">+34 921 234 567</a></p>
+                    </div>
+                    <div class="info-item">
+                        <h3>✉️ Email</h3>
+                        <p><a href="mailto:info@bordadoscastellanos.es">info@bordadoscastellanos.es</a></p>
+                    </div>
+                    <div class="info-item">
+                        <h3>🕐 Horario</h3>
+                        <p>Lunes - Viernes: 9:00 - 18:00<br>Sábado: 10:00 - 14:00</p>
+                    </div>
+                </div>
+
+                <form class="contacto-form" onsubmit="handleFormSubmit(event)">
+                    <input type="text" placeholder="Tu nombre" required>
+                    <input type="email" placeholder="Tu email" required>
+                    <input type="tel" placeholder="Tu teléfono">
+                    <textarea placeholder="Cuéntanos sobre tu proyecto..." rows="5" required></textarea>
+                    <button type="submit" class="btn btn-primary">Enviar Solicitud</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Bordados Castellanos</h3>
+                    <p>Preservando la tradición del bordado español desde 1992.</p>
+                    <div class="redes-sociales">
+                        <a href="#" class="social-link">Facebook</a>
+                        <a href="#" class="social-link">Instagram</a>
+                        <a href="#" class="social-link">Pinterest</a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>Servicios</h3>
+                    <ul>
+                        <li><a href="#servicios">Bordado a Mano</a></li>
+                        <li><a href="#servicios">Bordado Industrial</a></li>
+                        <li><a href="#servicios">Diseño Personalizado</a></li>
+                        <li><a href="#servicios">Soluciones Corporativas</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Información</h3>
+                    <ul>
+                        <li><a href="#sobre-nosotros">Sobre Nosotros</a></li>
+                        <li><a href="#">Política de Privacidad</a></li>
+                        <li><a href="#">Términos de Servicio</a></li>
+                        <li><a href="#">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Newsletter</h3>
+                    <p>Suscríbete para novedades y ofertas exclusivas</p>
+                    <form class="newsletter-form" onsubmit="handleNewsletterSubmit(event)">
+                        <input type="email" placeholder="Tu email" required>
+                        <button type="submit">Suscribir</button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Bordados Castellanos. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

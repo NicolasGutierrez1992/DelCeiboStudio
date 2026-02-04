@@ -1,0 +1,24 @@
+{
+  "name": "bordados-castellanos",
+  "version": "1.0.0",
+  "description": "Web publicitaria para Bordados Castellanos - Casa de bordados artesanales española",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "keywords": [
+    "bordados",
+    "artesanía",
+    "españa",
+    "textiles"
+  ],
+  "author": "DelCeibo Studio",
+  "license": "MIT",
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
