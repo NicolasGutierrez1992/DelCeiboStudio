@@ -42,7 +42,7 @@
         <div class="hero-overlay"></div>
         <div class="hero-content">
             <h1 class="hero-title">Taller de bordados</h1>
-            <p class="hero-subtitle">Taller madrileño de artesanía textil — encargos, uniformes y proyectos personalizados</p>
+            <p class="hero-subtitle"> </p>
             <div class="hero-ctas">
                 <a href="#contacto" class="btn btn-primary">Pedir presupuesto</a>
                 <a href="#colecciones" class="btn btn-secondary">Ver colecciones</a>
@@ -54,11 +54,10 @@
     <section class="hero hero-cover" id="inicio" aria-label="Hero - Bordados Castellanos">
         <div class="hero-overlay"></div>
         <div class="hero-content">
-            <h1 class="hero-title">We bring fashion to workwear</h1>
-            <p class="hero-subtitle">Jeffrey's Apparel es una firma madrileña especializada en uniformidades con un enfoque distinto. Nacemos desde la sastrería Old Jeffrey, aplicando nuestro know-how textil y la atención al detalle del B2C al mundo B2B.
+            <h1 class="hero-title">Diseño de uniformes corporativos</h1>
+            <p class="hero-subtitle">Somos un taller madrileño de uniformes con un enfoque diferencial: experiencia textil y precisión para proyectos B2B.  
+                Proponemos diseños no convencionales que mantienen la eficiencia de costes, equilibrando funcionalidad, estética y personalidad de marca.</p>
 
-Ofrecemos propuestas que se alejan de la uniformidad tradicional, sin incrementar costes, combinando funcionalidad, diseño y esencia de marca.</p>
-            
         </div>
     </section>
 
@@ -147,14 +146,11 @@ Ofrecemos propuestas que se alejan de la uniformidad tradicional, sin incrementa
             <div class="sobre-content">
                 <div class="sobre-text">
                     <h2 class="section-title">Sobre Bordados Castellanos</h2>
-                    <p>Somos un taller con sede en Madrid que combina técnicas tradicionales con acabados contemporáneos. Desde 1992 atendemos a particulares, diseñadores y empresas madrileñas que buscan piezas con carácter y durabilidad.</p>
-                    <p>Nuestro equipo, formado por maestros artesanos, trabaja con hilos de calidad y materiales seleccionados. Si estás en Madrid, puedes visitar el taller para ver muestras y recoger encargos.</p>
-                    <p>Ofrecemos también envíos a toda España y servicios especiales para eventos y hostelería en la Comunidad de Madrid.</p>
+                    <p>Activos desde 1996, acompañamos a marcas y clientes con soluciones textiles que equilibran diseño, funcionalidad y resistencia.</p>
                     <ul class="stats">
-                        <li><strong>32</strong> años de tradición</li>
-                        <li><strong>15+</strong> maestros artesanos</li>
+                        <li><strong>30</strong> años de tradición</li>
                         <li><strong>5000+</strong> proyectos completados</li>
-                        <li><strong>40+</strong> países servidos</li>
+                        <li><strong>10+</strong> países servidos</li>
                     </ul>
                 </div>
                 <div class="sobre-image">
@@ -201,7 +197,7 @@ Ofrecemos propuestas que se alejan de la uniformidad tradicional, sin incrementa
                 <div class="contacto-info">
                     <div class="info-item">
                         <h3>📍 Ubicación</h3>
-                        <p>C. de la Tradición, 12<br>28004 Madrid, España</p>
+                        <p>C/ Fomento 12  <br>Local -28013 <br>Madrid, España</p>
                     </div>
                     <div class="info-item">
                         <h3>📞 Teléfono</h3>
@@ -209,7 +205,7 @@ Ofrecemos propuestas que se alejan de la uniformidad tradicional, sin incrementa
                     </div>
                     <div class="info-item">
                         <h3>✉️ Email</h3>
-                        <p><a href="mailto:info@bordadoscastellanos.es">info@bordadoscastellanos.es</a></p>
+                        <p><a href="mailto:hola@delceibostudio.com">hola@delceibostudio.com</a></p>
                     </div>
                     <div class="info-item">
                         <h3>🕐 Horario</h3>
@@ -217,11 +213,17 @@ Ofrecemos propuestas que se alejan de la uniformidad tradicional, sin incrementa
                     </div>
                 </div>
 
-                <form class="contacto-form" onsubmit="handleFormSubmit(event)">
-                    <input type="text" placeholder="Tu nombre" required>
-                    <input type="email" placeholder="Tu email" required>
-                    <input type="tel" placeholder="Tu teléfono">
-                    <textarea placeholder="Cuéntanos sobre tu proyecto..." rows="5" required></textarea>
+                <form class="contacto-form" action="https://formspree.io/f/mbdarzaw" method="POST">
+                    <input type="text" name="nombre" placeholder="Tu nombre" required>
+                    <input type="email" name="email" placeholder="Tu email" required>
+                    <input type="tel" name="telefono" placeholder="Tu teléfono">
+                    <textarea name="mensaje" placeholder="Cuéntanos sobre tu proyecto..." rows="5" required></textarea>
+
+                    <!-- Formspree helpers: subject, language and redirect (_next). Replace _next with a real thank-you page if you create one -->
+                    <input type="hidden" name="_subject" value="Solicitud desde web - Del Ceibo Studio">
+                    <input type="hidden" name="_language" value="es">
+                    <!-- <input type="hidden" name="_next" value="/gracias.html"> -->
+
                     <button type="submit" class="btn btn-primary">Enviar Solicitud</button>
                 </form>
             </div>
@@ -229,7 +231,7 @@ Ofrecemos propuestas que se alejan de la uniformidad tradicional, sin incrementa
     </section>
 
     <!-- WhatsApp floating button -->
-    <a href="https://wa.me/34686490624?text=Hola%20Bordados%20Castellanos%2C%20quiero%20informaci%C3%B3n" class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Enviar mensaje por WhatsApp">
+    <a href="https://wa.me/34686490624?text=Hola%20Del%20Ceibo%20Studio%2C%20quiero%20informaci%C3%B3n" class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Enviar mensaje por WhatsApp">      
         <!-- WhatsApp SVG icon -->
         <svg viewBox="0 0 24 24" class="whatsapp-icon" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
             <path d="M20.52 3.48A11.92 11.92 0 0012 0C5.37 0 .05 5.32.05 11.95a11.6 11.6 0 001.63 5.8L0 24l6.45-1.68a11.92 11.92 0 005.55 1.39h.01c6.63 0 11.95-5.32 11.95-11.95 0-3.18-1.24-6.17-3.44-8.98zM12 21.8a10.2 10.2 0 01-5.22-1.44l-.37-.22-3.83 1 1.02-3.73-.24-.38A10.12 10.12 0 012.05 11.95c0-5.49 4.46-9.95 9.95-9.95 2.66 0 5.16 1.04 7.05 2.93a9.84 9.84 0 012.9 7.02c0 5.49-4.46 9.95-9.95 9.95z"/>
@@ -237,7 +239,7 @@ Ofrecemos propuestas que se alejan de la uniformidad tradicional, sin incrementa
         </svg>
     </a>
 
-    <!-- Footer -->
+    <!-- Footer 
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
@@ -271,8 +273,9 @@ Ofrecemos propuestas que se alejan de la uniformidad tradicional, sin incrementa
                 <div class="footer-section">
                     <h3>Newsletter</h3>
                     <p>Suscríbete para novedades y ofertas exclusivas</p>
-                    <form class="newsletter-form" onsubmit="handleNewsletterSubmit(event)">
-                        <input type="email" placeholder="Tu email" required>
+                    <form class="newsletter-form" action="https://formspree.io/f/mbdarzaw" method="POST">
+                        <input type="email" name="email" placeholder="Tu email" required>
+                        <input type="hidden" name="_subject" value="Suscripción newsletter - Del Ceibo Studio">
                         <button type="submit">Suscribir</button>
                     </form>
                 </div>
@@ -281,7 +284,7 @@ Ofrecemos propuestas que se alejan de la uniformidad tradicional, sin incrementa
                 <p>&copy; 2026 Bordados Castellanos. Todos los derechos reservados.</p>
             </div>
         </div>
-    </footer>
+    </footer>-->
 
     <script src="script.js"></script>
 </body>

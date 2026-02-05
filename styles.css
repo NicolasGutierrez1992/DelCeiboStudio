@@ -310,6 +310,8 @@ body {
 .colecciones {
     padding: 5rem 20px;
     background-color: white;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2.5rem;
 }
 
 .colecciones-grid {
@@ -580,7 +582,7 @@ body {
 
 .contacto-info {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     gap: 2rem;
 }
 
@@ -590,11 +592,12 @@ body {
 }
 
 .info-item p {
+    color:rgb(0, 0, 0);
     line-height: 1.8;
 }
 
 .info-item a {
-    color: white;
+    color: rgb(0, 0, 0);
     text-decoration: none;
     transition: var(--transition);
 }
@@ -626,7 +629,7 @@ body {
 /* Footer */
 .footer {
     background-color: var(--dark-color);
-    color: white;
+    color: rgb(0, 0, 0);
     padding: 3rem 20px 1rem;
 }
 
@@ -775,7 +778,7 @@ body {
     }
 
     .contacto-info {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr ;
     }
 
     .stats {
