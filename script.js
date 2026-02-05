@@ -4,7 +4,13 @@ const navMenu = document.querySelector('.nav-menu');
 
 if (hamburger) {
     hamburger.addEventListener('click', () => {
-        navMenu.classList.toggle('active');
+        const isOpen = navMenu.classList.toggle('active');
+        // Reflect state in aria-expanded for accessibility
+        hamburger.setAttribute('aria-expanded', String(isOpen));
+        if (!isOpen) {
+            // ensure focusable elements inside menu are not accidentally focused when closed
+            hamburger.focus();
+        }
     });
 }
 
@@ -12,6 +18,7 @@ if (hamburger) {
 document.querySelectorAll('.nav-link').forEach(link => {
     link.addEventListener('click', () => {
         navMenu.classList.remove('active');
+        if (hamburger) hamburger.setAttribute('aria-expanded', 'false');
     });
 });
 

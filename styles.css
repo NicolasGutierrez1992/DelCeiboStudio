@@ -7,6 +7,9 @@
     --dark-color: #1B1B1B; /* texto principal */
     --light-color: #fff9e4; /* fondo general */
 
+    /* Logo size used to set navbar height */
+    --logo-size: 160px;
+
     /* Paleta suave entre bordó y amarillo (nuevas variables) */
     --palette-bg: #FFFFFF;               /* Fondo blanco limpio */
     --palette-bordo: #700303;           /* Bordó principal (reusa --primary-color) */
@@ -57,15 +60,20 @@ body {
     position: sticky;
     top: 0;
     z-index: 1000;
+    height: var(--logo-size); /* navbar same height as logo */
 }
 
 .navbar-container {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 1.25rem 20px;
+    /* remove vertical padding and use explicit height so it matches logo */
+    padding: 0 20px;
+    height: 100%;
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: center;
+    gap: 1rem;
+    position: relative; /* needed for centered logo */
 }
 
 .logo {
@@ -76,12 +84,16 @@ body {
     font-weight: 700;
     color: var(--primary-color);
     text-decoration: none;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1001;
 }
 
+/* Logo sizing: keep image height fixed with auto width */
 .logo-img {
-    width: 140px; /* hacer el logo grande y dominante */
-    height: auto;
-    object-fit: contain;
+    height: var(--logo-size);
+    width: auto;
     display: block;
 }
 
@@ -105,11 +117,43 @@ body {
 /* Ajuste: cuando el logo transparente necesita un pequeño contenedor */
 .logo .logo-img--transparent { padding: 6px; background: transparent; border-radius: 6px; }
 
+/* Force nav items to be collapsed by default on all viewports (only open when .active)
+   This ensures the menu never displays inline on wide screens */
 .nav-menu {
-    display: flex;
+    display: none !important; /* always collapsed */
     list-style: none;
     gap: 2rem;
+    flex-direction: column;
+    position: absolute;
+    left: 0;
+    top: 100%; /* show below navbar when active */
+    width: 100%;
+    background: white;
+    padding: 1rem 1.25rem;
+    box-shadow: var(--shadow);
+    z-index: 1000;
 }
+
+.nav-menu.active {
+    display: flex !important;
+    animation: dropdown 180ms ease;
+}
+
+@keyframes dropdown {
+    from { transform: translateY(-6px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+/* Make sure hamburger is always visible on the right */
+.hamburger { display: flex !important; }
+
+/* Larger screens: keep layout similar but still collapsed until toggle */
+@media (min-width: 900px) {
+    .nav-menu { left: 0; top: 100%; width: 420px; border-radius: 8px; }
+}
+
+/* Slight spacing so menu items don't sit directly beneath centered logo */
+.nav-menu li { padding: 0.5rem 0; }
 
 .nav-link {
     color: var(--dark-color);
@@ -155,19 +199,26 @@ body {
     display: none;
 }
 
+/* Hamburger visible always and placed at the right */
 .hamburger {
-    display: none;
+    display: flex;
     flex-direction: column;
     cursor: pointer;
+    background: transparent;
+    border: none;
+    padding: 8px;
+    margin-left: auto;
 }
 
 .hamburger span {
-    width: 25px;
+    width: 26px;
     height: 3px;
     background-color: var(--primary-color);
-    margin: 5px 0;
+    margin: 4px 0;
     transition: var(--transition);
 }
+
+.hamburger[aria-expanded="true"] span { background: var(--secondary-color); }
 
 /* Hero Section */
 .hero {
@@ -697,7 +748,7 @@ body {
     .nav-menu {
         display: none;
         position: absolute;
-        top: 70px;
+        top: 72px;
         left: 0;
         width: 100%;
         flex-direction: column;
@@ -746,6 +797,9 @@ body {
 }
 
 @media (max-width: 480px) {
+    :root { --logo-size: 96px; }
+    .navbar { height: var(--logo-size); }
+    .logo-img { height: var(--logo-size); }
     .hero-title {
         font-size: 1.8rem;
     }
@@ -857,12 +911,6 @@ debe tener un color de fondo blanco*/
 @media (max-width: 480px) {
     .hero-cover { min-height: 60vh; }
     .hero-cover .hero-title { font-size: 1.8rem; }
-    .logo-img { width: 84px; }
-}
-
-/* Make headings lighter across the site (remove bold appearance)
-   Keeps Playfair Display for titles but uses the regular weight */
-h1, h2, h3, h4, h5, h6,
 .section-title,
 .hero-title,
 .logo-text,
@@ -870,4 +918,26 @@ h1, h2, h3, h4, h5, h6,
 .coleccion-card h3 {
     font-family: 'Cormorant Garamond', serif;
     font-weight: 400;
+}
+
+/* Collapse behavior when viewport small or nav too long */
+@media (max-width: 900px) {
+    .nav-menu { display: none; position: absolute; top: 72px; left: 0; width: 100%; background: white; padding: 1.5rem 2rem; box-shadow: var(--shadow); flex-direction: column; gap: 1rem; }
+    .nav-menu.active { display: flex; }
+    .hamburger { display: flex; }
+}
+
+/* If large screen but nav items overflow, show hamburger (simple heuristic) */
+@media (min-width: 901px) and (max-width: 1160px) {
+    .nav-menu { display: flex; gap: 1rem; }
+    /* keep hamburger hidden unless activated by script */
+    .hamburger { display: none; }
+}
+
+/* Ensure logo aligns right visually */
+.logo { display:flex; align-items:center; }
+
+@media (min-width: 1200px) {
+    /* Slightly reduce logo on very large screens to balance visual */
+    :root { --logo-size: 140px; }
 }
