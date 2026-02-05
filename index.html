@@ -8,17 +8,15 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <!-- Cargar Playfair Display (400,700,900) y Lato -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- Navegación -->
-    <nav class="navbar">
+    <!-- Navegación (reemplazada por versión más limpia y centrada) -->
+    <nav class="navbar navbar--home">
         <div class="navbar-container">
             <div class="logo">
-                <!-- versión transparente (sin fondo) -->
-                <img src="img/LogoDelCeibo-SF.png" alt="Bordados Castellanos" class="logo-img logo-img--transparent" width="100" height="100">
-                <!-- versión con fondo / boxed (oculta por defecto) -->
-                <img src="img/LogoDelCeibo.png" alt="Bordados Castellanos" class="logo-img logo-img--boxed" width="48" height="48">
+                <img src="img/LogoDelCeibo-SF.png" alt="Bordados Castellanos" class="logo-img logo-img--transparent" width="160" height="160">
                 <span class="logo-text">Bordados Castellanos</span>
             </div>
             <ul class="nav-menu">
@@ -28,23 +26,19 @@
                 <li><a href="#sobre-nosotros" class="nav-link">Sobre Nosotros</a></li>
                 <li><a href="#contacto" class="nav-link nav-link-btn">Contacto</a></li>
             </ul>
-            <div class="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section class="hero" id="inicio">
+    <!-- Hero Section (formato full-bleed tipo ejemplo) -->
+    <section class="hero hero-cover" id="inicio" aria-label="Hero - Bordados Castellanos">
+        <div class="hero-overlay"></div>
         <div class="hero-content">
-            <h1 class="hero-title">Bordados de Tradición</h1>
-            <p class="hero-subtitle">Taller de artesanía textil — piezas únicas y encargos para empresas y particulares</p>
-            <button class="btn btn-primary" onclick="document.getElementById('contacto').scrollIntoView({behavior: 'smooth'})">Pedir presupuesto (Madrid)</button>
-        </div>
-        <div class="hero-image">
-            <img src="hero-embroidery.jpg" alt="Bordados artesanales">
+            <h1 class="hero-title">Bordados de Tradición en Madrid</h1>
+            <p class="hero-subtitle">Taller madrileño de artesanía textil — encargos, uniformes y proyectos personalizados</p>
+            <div class="hero-ctas">
+                <a href="#contacto" class="btn btn-primary">Pedir presupuesto</a>
+                <a href="#colecciones" class="btn btn-secondary">Ver colecciones</a>
+            </div>
         </div>
     </section>
 
