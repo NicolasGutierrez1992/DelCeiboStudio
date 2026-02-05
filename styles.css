@@ -360,6 +360,30 @@ body {
     font-size: 0.95rem;
 }
 
+/* Carrusel de servicios */
+.carousel { display:flex; align-items:center; gap:12px; position:relative; }
+.carousel-viewport { overflow:hidden; flex:1; }
+.carousel-track { display:flex; gap:20px; list-style:none; padding:0; margin:0; transition:transform 0.5s ease; }
+.carousel-slide { min-width: 100%; box-sizing: border-box; display:flex; justify-content:center; }
+
+.servicio-card { background: var(--palette-cream); border-radius: 12px; overflow:hidden; width:100%; max-width: 980px; display:flex; gap:0; align-items:stretch; box-shadow: var(--shadow); }
+.servicio-img { width: 40%; object-fit:cover; height: 100%; display:block; }
+.servicio-body { padding: 2rem; flex:1; }
+.servicio-body h3 { color: var(--primary-color); margin-bottom:0.5rem; font-size:1.5rem; }
+.servicio-body p { color: var(--palette-neutral-warm); }
+
+.carousel-btn { background: transparent; border: none; font-size: 2.2rem; color: var(--primary-color); cursor:pointer; padding: 6px 10px; }
+.carousel-btn:focus { outline: 2px solid var(--primary-color); }
+
+.carousel-indicators { display:flex; gap:8px; margin-top:12px; justify-content:center; }
+.carousel-indicator { width:12px; height:12px; border-radius:50%; background: #ddd; border: none; cursor:pointer; }
+.carousel-indicator[aria-selected="true"] { background: var(--primary-color); }
+
+@media (max-width: 900px) {
+    .servicio-card { flex-direction:column; }
+    .servicio-img { width:100%; height: 220px; }
+}
+
 /* Galería */
 .galeria {
     padding: 5rem 20px;
@@ -489,8 +513,8 @@ body {
 /* Contacto */
 .contacto {
     padding: 5rem 20px;
-    background: linear-gradient(135deg, var(--primary-color) 0%, #d4bfaf 100%);
-    color: white;
+    background: var(--light-color);
+    color: rgb(255, 189, 163);
 }
 
 .contacto .section-title {

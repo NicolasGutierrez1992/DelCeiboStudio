@@ -42,80 +42,77 @@
         </div>
     </section>
 
-    <!-- Colecciones Destacadas -->
-    <section class="colecciones" id="colecciones">
-        <div class="container">
-            <h2 class="section-title">Nuestras Colecciones</h2>
-            <div class="colecciones-grid">
-                <div class="coleccion-card">
-                    <div class="coleccion-image">
-                        <img src="coleccion-tradicional.jpg" alt="Colección Tradicional">
-                    </div>
-                    <h3>Servicio de bordados</h3>
-                    <p>Ofrecemos bordados personalizados para prendas y accesorios con entrega rápida en Madrid y recogida en taller.</p>
-                    <a href="#contacto" class="btn btn-secondary">Más información</a>
-                </div>
+    <!-- Hero Section (formato full-bleed tipo ejemplo) -->
+    <section class="hero hero-cover" id="inicio" aria-label="Hero - Bordados Castellanos">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1 class="hero-title">We bring fashion to workwear</h1>
+            <p class="hero-subtitle">Jeffrey's Apparel es una firma madrileña especializada en uniformidades con un enfoque distinto. Nacemos desde la sastrería Old Jeffrey, aplicando nuestro know-how textil y la atención al detalle del B2C al mundo B2B.
 
-                <div class="coleccion-card">
-                    <div class="coleccion-image">
-                        <img src="coleccion-moderna.jpg" alt="Colección Moderna">
-                    </div>
-                    <h3>Servicio de estampación textil</h3>
-                    <p>Estampación y marcaje textil para hostelería y empresas madrileñas. Acabados resistentes y profesionales.</p>
-                    <a href="#contacto" class="btn btn-secondary">Más información</a>
-                </div>
-
-                <div class="coleccion-card">
-                    <div class="coleccion-image">
-                        <img src="coleccion-personalizada.jpg" alt="Bordados Personalizados">
-                    </div>
-                    <h3>Bordados Personalizados</h3>
-                    <p>Creamos diseños únicos para eventos, merchandising y uniformes. Servicio presencial en Madrid y envío nacional.</p>
-                    <a href="#contacto" class="btn btn-secondary">Más información</a>
-                </div>
-            </div>
+Ofrecemos propuestas que se alejan de la uniformidad tradicional, sin incrementar costes, combinando funcionalidad, diseño y esencia de marca.</p>
+            
         </div>
     </section>
 
-    <!-- Servicios -->
-    <section class="servicios" id="servicios">
+    <!-- Colecciones / Carrusel de Servicios -->
+    <section class="colecciones" id="colecciones" aria-label="Nuestros servicios">
         <div class="container">
-            <h2 class="section-title">Servicios para Madrid</h2>
-            <div class="servicios-grid">
-                <div class="servicio-item">
-                    <div class="servicio-icon">🧵</div>
-                    <h3>Bordado a Mano</h3>
-                    <p>Técnicas tradicionales realizadas en nuestro taller en Madrid por artesanos con décadas de experiencia.</p>
+            <h2 class="section-title">Nuestros Servicios</h2>
+
+            <div class="carousel" id="servicesCarousel" aria-roledescription="carousel">
+                <button class="carousel-btn carousel-btn--prev" aria-label="Anterior">‹</button>
+
+                <div class="carousel-viewport">
+                    <ul class="carousel-track">
+                        <li class="carousel-slide" data-index="0" aria-roledescription="slide" aria-label="Bordado a Mano">
+                            <div class="servicio-card">
+                                <img src="coleccion-tradicional.jpg" alt="Bordado a mano" class="servicio-img">
+                                <div class="servicio-body">
+                                    <h3>Bordado a Mano</h3>
+                                    <p>Técnicas artesanales ejecutadas en nuestro taller en Madrid para piezas únicas y de alta calidad.</p>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li class="carousel-slide" data-index="1" aria-roledescription="slide" aria-label="Bordado Industrial">
+                            <div class="servicio-card">
+                                <img src="coleccion-moderna.jpg" alt="Bordado industrial" class="servicio-img">
+                                <div class="servicio-body">
+                                    <h3>Bordado Industrial</h3>
+                                    <p>Soluciones para pedidos de volumen con acabados profesionales y control de calidad.</p>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li class="carousel-slide" data-index="2" aria-roledescription="slide" aria-label="Diseño y Digitalización">
+                            <div class="servicio-card">
+                                <img src="coleccion-personalizada.jpg" alt="Diseño y digitalización" class="servicio-img">
+                                <div class="servicio-body">
+                                    <h3>Diseño y Digitalización</h3>
+                                    <p>Digitalizamos logos y diseñamos patrones optimizados para bordado; pruebas en taller disponibles.</p>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li class="carousel-slide" data-index="3" aria-roledescription="slide" aria-label="Acabados Premium">
+                            <div class="servicio-card">
+                                <img src="taller.jpg" alt="Acabados premium" class="servicio-img">
+                                <div class="servicio-body">
+                                    <h3>Acabados Premium</h3>
+                                    <p>Montaje, enmarcado y embalaje profesional. Entregas ágiles en Madrid y envío nacional.</p>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
                 </div>
 
-                <div class="servicio-item">
-                    <div class="servicio-icon">⚙️</div>
-                    <h3>Bordado Industrial</h3>
-                    <p>Capacidad para pedidos grandes: proveedores y empresas madrileñas confían en nuestros plazos y calidad.</p>
-                </div>
+                <button class="carousel-btn carousel-btn--next" aria-label="Siguiente">›</button>
 
-                <div class="servicio-item">
-                    <div class="servicio-icon">🎨</div>
-                    <h3>Diseño y Digitalización</h3>
-                    <p>Digitalizamos tu logo para bordado y te ofrecemos pruebas en taller en Madrid antes de producción.</p>
-                </div>
-
-                <div class="servicio-item">
-                    <div class="servicio-icon">📦</div>
-                    <h3>Acabados Premium</h3>
-                    <p>Montaje, enmarcación y embalaje cuidadoso de tus bordados personalizados.</p>
-                </div>
-
-                <div class="servicio-item">
-                    <div class="servicio-icon">🏢</div>
-                    <h3>Soluciones Corporativas</h3>
-                    <p>Uniformes, logos bordados y merchandising de marca con identidad corporativa.</p>
-                </div>
-
-                <div class="servicio-item">
-                    <div class="servicio-icon">🚚</div>
-                    <h3>Envíos Rápidos</h3>
-                    <p>Entrega en toda España y Europa. Embalaje profesional y seguro para tus piezas.</p>
+                <div class="carousel-indicators" role="tablist" aria-label="Indicadores de carrusel">
+                    <button class="carousel-indicator" data-slide-to="0" aria-label="Ir al slide 1" aria-selected="true"></button>
+                    <button class="carousel-indicator" data-slide-to="1" aria-label="Ir al slide 2" aria-selected="false"></button>
+                    <button class="carousel-indicator" data-slide-to="2" aria-label="Ir al slide 3" aria-selected="false"></button>
+                    <button class="carousel-indicator" data-slide-to="3" aria-label="Ir al slide 4" aria-selected="false"></button>
                 </div>
             </div>
         </div>
